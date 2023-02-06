@@ -5,6 +5,7 @@ import {
   presetTypography,
   presetUno,
   presetWebFonts,
+  presetMini,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
@@ -47,4 +48,13 @@ export default defineConfig({
     transformerDirectives(),
     transformerVariantGroup(),
   ],
+  theme: {
+    colors: {
+      'brand': {
+        'primary': '#6D829B',
+        'secondary': '#B3BDCA',
+        'cream': '#E7E1DA'
+      }
+    }
+  }
 })
