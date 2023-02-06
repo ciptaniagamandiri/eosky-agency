@@ -26,6 +26,7 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.9",
     "@heroicons/vue": "^2.0.14",
-    "@nuxtjs/firebase": "^8.2.2"
+    "@nuxtjs/firebase": "^8.2.2",
+    "firebase": "^9.17.1"
   }
 }

@@ -28,8 +28,6 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
   },
-  plugins: [
-    // '@/plugins/firebase'
-  ]
+  ssr: false
   
 })
