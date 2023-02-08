@@ -1,59 +1,43 @@
 <template>
-  <footer class="bg-gray-9" aria-labelledby="footer-heading">
+  <footer class="bg-brand-cream" aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
-    <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+    <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-20">
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
         <div class="space-y-8">
-          <img class="h-7" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Company name" />
-          <p class="text-sm leading-6 text-white">Making the world a better place through constructing elegant hierarchies.</p>
-          <div class="flex space-x-6">
-            <a v-for="item in navigation.social" :key="item.name" :href="item.href" class="text-gray-400 hover:text-gray-500">
-              <span class="sr-only">{{ item.name }}</span>
-              <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
-            </a>
+          <img class="h-32" src="~/assets/logo.png" alt="Company name" />
+          <div>
+            <p text-sm text-gray-8>Find Us</p>
+            <p class="leading-6 text-gray-9">Jakarta Selatan, Indonesia.</p>
           </div>
+          
         </div>
-        <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-          <div class="md:grid md:grid-cols-2 md:gap-8">
-            <div>
-              <h3 class="text-sm font-semibold leading-6 text-gray-2">Solutions</h3>
-              <ul role="list" class="mt-6 space-y-4">
-                <li v-for="item in navigation.solutions" :key="item.name">
-                  <a :href="item.href" class="text-sm leading-6 text-white hover:text-gray-2">{{ item.name }}</a>
-                </li>
-              </ul>
-            </div>
-            <div class="mt-10 md:mt-0">
-              <h3 class="text-sm font-semibold leading-6 text-gray-2">Support</h3>
-              <ul role="list" class="mt-6 space-y-4">
-                <li v-for="item in navigation.support" :key="item.name">
-                  <a :href="item.href" class="text-sm leading-6 text-white hover:text-gray-2">{{ item.name }}</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="md:grid md:grid-cols-2 md:gap-8">
-            <div>
-              <h3 class="text-sm font-semibold leading-6 text-gray-2">Company</h3>
-              <ul role="list" class="mt-6 space-y-4">
-                <li v-for="item in navigation.company" :key="item.name">
-                  <a :href="item.href" class="text-sm leading-6 text-white hover:text-gray-2">{{ item.name }}</a>
-                </li>
-              </ul>
-            </div>
-            <div class="mt-10 md:mt-0">
-              <h3 class="text-sm font-semibold leading-6 text-gray-2">Legal</h3>
-              <ul role="list" class="mt-6 space-y-4">
-                <li v-for="item in navigation.legal" :key="item.name">
-                  <a :href="item.href" class="text-sm leading-6 text-white hover:text-gray-2">{{ item.name }}</a>
-                </li>
-              </ul>
+        <div class="mt-16 col-span-2">
+          <div class="flex flex-col justify-end md:items-end">
+            <div >
+                <div class="flex flex-col gap-4">
+                  <p class="text-gray-8 hover:text-gray-500 flex space-x-3 items-center">
+                  <span >Contact us</span>
+                </p>
+                <a href="https://www.instagram.com/eosky_agency/" target="_blank" class="text-gray-8 hover:text-gray-500 flex space-x-3 items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3Z"/></svg>
+                  <span >eosky_agency</span>
+                </a>
+                <a href="https://wa.me/6285797370467" target="_blank" class="text-gray-8 hover:text-gray-500 flex space-x-3 items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.188 8.188 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.07-.26-.13-1.06-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01Z"/></svg>
+                  <span >+62 857-9737-0467</span>
+                </a>
+                <a href="mailto:eosky.agency@gmail.com" target="_blank" class="text-gray-8 hover:text-gray-500 flex space-x-3 items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" aria-hidden="true" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M441.6 171.61 266.87 85.37a24.57 24.57 0 0 0-21.74 0L70.4 171.61A40 40 0 0 0 48 207.39V392c0 22.09 18.14 40 40.52 40h335c22.38 0 40.52-17.91 40.52-40V207.39a40 40 0 0 0-22.44-35.78Z"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M397.33 368 268.07 267.46a24 24 0 0 0-29.47 0L109.33 368m200-73 136-103m-384 0 139 105"/></svg>
+                  <span>eosky.agency@gmail.com</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-        <p class="text-xs leading-5 text-gray-500">&copy; 2020 Your Company, Inc. All rights reserved.</p>
+      <div class="mt-16 pt-8 sm:mt-20 lg:mt-24">
+        <p class="text-xs leading-5 text-gray-500">&copy; 2023 Eosky Agency, All rights reserved.</p>
+        <p class="text-xs leading-5 text-gray-500">Collaborate with <a href="#" target="_blank" class="font-bold">Cipta Niaga Mandiri Teknologi</a></p>
       </div>
     </div>
   </footer>
@@ -128,34 +112,34 @@ const navigation = {
           ]),
       }),
     },
-    {
-      name: 'GitHub',
-      href: '#',
-      icon: defineComponent({
-        render: () =>
-          h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
-            h('path', {
-              'fill-rule': 'evenodd',
-              d: 'M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z',
-              'clip-rule': 'evenodd',
-            }),
-          ]),
-      }),
-    },
-    {
-      name: 'YouTube',
-      href: '#',
-      icon: defineComponent({
-        render: () =>
-          h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
-            h('path', {
-              'fill-rule': 'evenodd',
-              d: 'M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z',
-              'clip-rule': 'evenodd',
-            }),
-          ]),
-      }),
-    },
+    // {
+    //   name: 'GitHub',
+    //   href: '#',
+    //   icon: defineComponent({
+    //     render: () =>
+    //       h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
+    //         h('path', {
+    //           'fill-rule': 'evenodd',
+    //           d: 'M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z',
+    //           'clip-rule': 'evenodd',
+    //         }),
+    //       ]),
+    //   }),
+    // },
+    // {
+    //   name: 'YouTube',
+    //   href: '#',
+    //   icon: defineComponent({
+    //     render: () =>
+    //       h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
+    //         h('path', {
+    //           'fill-rule': 'evenodd',
+    //           d: 'M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z',
+    //           'clip-rule': 'evenodd',
+    //         }),
+    //       ]),
+    //   }),
+    // },
   ],
 }
 </script>
