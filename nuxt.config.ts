@@ -24,6 +24,7 @@ export default defineNuxtConfig({
   },
   css: [
     '@unocss/reset/tailwind.css',
+    "aos/dist/aos.css"
   ],
   colorMode: {
     classSuffix: '',

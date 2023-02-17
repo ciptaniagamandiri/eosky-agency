@@ -68,24 +68,31 @@
       </Dialog>
     </div>
     <div class="mx-auto max-w-7xl px-6 pt-24 sm:pt-20  lg:px-8 lg:pt-40">
-      <BannerSection />
-      <AboutSection />
-      <ProductSection />
-      <WorkflowSection />
+      <BannerSection data-aos="fade-up"/>
+      <AboutSection data-aos="fade-up" data-aos-delay="400"/>
+      <ProductSection data-aos="fade-up" data-aos-delay="400"/>
+      <WorkflowSection data-aos="fade-up" data-aos-delay="400"/>
+      <TeamsSection data-aos="fade-up" data-aos-delay="400"/>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { Dialog, DialogPanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
+import AOS from "aos"
 
 import BannerSection from "~/components/home/Banner.vue"
 import AboutSection from "~/components/home/About.vue"
 import ProductSection from "~/components/home/Product.vue"
 import WorkflowSection from "~/components/home/Workflow.vue"
+import TeamsSection from "~/components/home/Teams.vue"
 
+
+onMounted(() => {
+    AOS.init();
+})
 const navigation = [
   { name: 'About', href: '#' },
   { name: 'Products', href: '#' },

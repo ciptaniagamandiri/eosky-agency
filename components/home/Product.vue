@@ -2,7 +2,7 @@
     <div class="relative  pt-10 pb-24 min-h-[50vh]">
         <div>
             <h1 text-center text-4xl lg:text-6xl font-unna text-white>
-                Eosky <span font-bold text-white>Products</span>
+               <span class="underline underline-indigo">Eosky</span>  <span font-bold text-white>Products</span>
             </h1>
             <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-y-6 mt-6 lg:mt-20">
                 <div class="space-y-4 text-white bg-brand-primary">

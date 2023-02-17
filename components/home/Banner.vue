@@ -1,5 +1,5 @@
 <template>
-    <div class=" overflow-hidden lg:flex lg:items-start lg:gap-x-10">
+    <div class=" lg:flex lg:items-start lg:gap-x-10">
         <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:flex-auto">
             <div class="flex px-2">
                 <div
@@ -25,8 +25,8 @@
                         aria-hidden="true">→</span></a>
             </div>
         </div>
-        <div class="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
-            <svg viewBox="0 0 366 729" role="img" class="mx-auto w-[22.875rem] max-w-full drop-shadow-xl">
+        <div class="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow ">
+            <svg viewBox="0 0 366 729" role="img" class="mx-auto w-[22.875rem] max-w-full drop-shadow-xl lg:-mt-[6rem]">
                 <title>App screenshot</title>
                 <defs>
                     <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
@@ -39,13 +39,32 @@
                     d="M16 59c0-23.748 19.252-43 43-43h246c23.748 0 43 19.252 43 43v615c0 23.196-18.804 42-42 42H58c-23.196 0-42-18.804-42-42V59Z" />
                 <foreignObject width="316" height="684" transform="translate(24 24)"
                     clip-path="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)">
-                    <img src="~/assets/ss1.jpeg" alt="" class="h-full w-full object-cover" />
+                    <img :src="images[image]" alt="" class="h-full w-full object-cover" />
                 </foreignObject>
             </svg>
         </div>
     </div>
 </template>
 <script setup>
+import { ref, Transition } from "vue"
 import { ChevronRightIcon } from '@heroicons/vue/20/solid'
+
+import ss1 from "~/assets/ss1.jpeg"
+import ss2 from "~/assets/ss2.jpeg"
+import ss3 from "~/assets/ss3.jpeg"
+import ss4 from "~/assets/ss4.jpeg"
+import ss5 from "~/assets/ss5.jpeg"
+import ss6 from "~/assets/ss6.jpeg"
+import ss7 from "~/assets/ss7.jpeg"
+
+const image = ref(0)
+
+const images = ref([
+    ss1, ss2, ss3, ss4, ss5, ss6, ss6, ss7
+])
+
+setInterval(() => {
+    image.value = image.value == 6 ? 0 : image.value+1
+}, 3000);
 
 </script>
